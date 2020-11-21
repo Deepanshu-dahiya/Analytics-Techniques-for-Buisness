@@ -1,0 +1,201 @@
+1.
+Question 1
+First Binary Classification Model
+
+Data_Final Project.xlsx
+You work for a bank as a business data analyst in the credit card risk-modeling department. Your bank conducted a bold experiment three years ago: for a single day it quietly issued credit cards to everyone who applied, regardless of their credit risk, until the bank had issued 600 cards without screening applicants.
+
+After three years, 150, or 25%, of those card recipients defaulted: they failed to pay back at least some of the money they owed. However, the bank collected very valuable proprietary data that it can now use to optimize its future card-issuing process.
+
+The bank initially collected six pieces of data about each person:
+
+· Age
+
+· Years at current employer
+
+· Years at current address
+
+· Income over the past year
+
+· Current credit card debt, and
+
+· Current automobile debt
+
+In addition, the bank now has a binary outcome: default = 1, and no default = 0.
+
+Your first assignment is to analyze the data and create a binary classification model to forecast future defaults.
+
+You will combine data from the above six inputs to output a single “score.” Use the Soldier Performance spreadsheet for a simple example of combining multiple inputs.
+
+Forecasting Soldier Performance.xlsx
+The relative rank-ordering of scores will determine the model’s effectiveness. For convenience-- in particular, so that you can use the AUC Calculator Spreadsheet--you are asked to use a scale for your score that has a maximum < 3.5 and a minimum > -3.5.
+
+At first you are not told what your bank’s own best estimate for its cost per False Negative (accepted applicant who becomes a defaulting customer) and False Positive (rejected customer who would not have defaulted) classification.
+
+Therefore, the best you can do is to design your model to maximize the Area Under the ROC Curve, or AUC.
+
+You are told that if your model is effective (“high enough” AUC, not defined further) and “robust” (again not defined, but in general this means relatively little decrease in AUC across multiple sets of new data) then it may be adopted by the bank as its predictive model for default, to determine which future applicants will be issued credit cards.
+
+You are first given a “Training Set” of 200 out of the 600 people in the experiment. The Data_For_Final_Project (below) has both the training set and test set you will need.
+
+Design your model using the Training Set. Standardized versions of the input data also provided for your convenience. You may combine the six inputs by adding them to, or subtracting them from, each other, taking simple ratios, etc. Exclude inputs that are not helpful and then experiment with how to combine the most informative inputs.
+
+Note that will need some of your quiz answers again later, so please write them down and keep track of them as you go along.
+
+Question: What is your model? Give it as a function of the two or more of the six inputs. For example: (Age + Years at Current Address)/Income [not a great model!].
+
+Your model should have at least two inputs.
+
+Answer        Years at current employer
+              Years at current address
+
+2.
+Question 2
+What is your model’s AUC on the Training Set? Use two digits to the right of the decimal place.
+
+Answer      .8
+
+3.
+Question 3
+Initial Assessment for Over-fitting (testing your model on new data)
+
+Next test your model, without changing any parameters, on the Test Set of 200 additional applicants. See the Test Set spreadsheet. It is part of the Data_For_Final_Project (below) and has both the training and test set.
+
+Data_Final Project.xlsx
+Hint: Make and use a second copy of the AUC Calculator Spreadsheet so that you can compare Test Set and Training Set results easily.
+
+AUC_Calculator and Review of AUC Curve.xlsx
+What is your model’s new AUC on the Test Set? Give two digits to the right of the decimal place.
+
+Answer      .6
+
+4.
+Question 4
+Finding the Cost-Minimizing Threshold for your Model
+
+Now that you have, hopefully, developed your model to the point where it is relatively “robust” across the training set and test set, your boss at the bank finally gives you its current rough estimate of the bank’s average costs for each type of classification error.
+
+[Note that all bank models here include only profits and losses within three years of when a card is issued, so the impact of out-years (years beyond 3) can be ignored.]
+
+Cost Per False Negative: $5000
+
+Cost Per False Positive: $2500
+
+For the 600 individuals that were automatically given cards without being classified, the total cost of the experiment turned out to be 25%*($5000)*600 or $750,000. This is $1,250 per event.
+
+Only models with lower cost per event than $1,250 should have any value.
+
+Question: What is the threshold score on the Training Set data for your model that minimizes Cost per Event? You will need this number to answer later questions.
+
+Hint: Using theAUC Calculator Spreadsheet, identify which Column displays the same cost-per-event (row 17) as the overall minimum cost-per-event shown in Cell J2. The threshold is shown in row 10 of that Column. What the threshold means is that at and above this number everything is classified as a "default."
+
+AUC_Calculator and Review of AUC Curve.xlsx
+Answer      2.5
+
+5.
+Question 5
+Finding the Minimum Cost Per Event
+
+Question: Again referring only to the Training Set data, what is the overall minimum cost-per-event?
+
+Hint: You will need this number to answer later questions. If you used the AUC Calculator, the overall minimum cost per event will be displayed in Cell J2.
+
+Note: for Coursera to interpret your answer correctly you must give your answer as an integer - no decimals or dollar sign.
+
+For Example - enter $800.00 as "800"
+
+Answer  .45
+
+6.
+Question 6
+Comparing the New Minimum Cost Per Event on Test Set Data
+
+When you compared AUC for the Training and Test Sets, all that is necessary is to look up the two different values in Cell G8. But to get an accurate measure of the cost-savings using the original model on new data, you can not automatically use the new threshold that results in the overall lowest cost-per-event on the Test Set.
+
+Remember that your model is being tested for its ability to forecast - but the new optimal threshold will be known only after the outcomes for the entire Test Set are known.
+
+All you can use is the model you developed on the Training Set data and the threshold from the Training Set that you should have recorded when answering Question 4.
+
+Question: At that same threshold score (NOT the threshold score that would minimize costs for the new Test Set, but the “old” threshold score that minimized costs on the Training Set) what is the cost per event on the test set?
+
+Hint: Using the AUC Calculator Spreadsheet previously provided, locate the column on the Training Set data that has the lowest-cost-per event. That same column and threshold in the Test Set copy of the AUC Calculator will have a new cost-per-event, displayed in row 17. This is almost always higher than the minimum cost-per-event on the Training Set, and also higher than what the minimal cost-per-event would be on the Test Set, if one could know the new optimal threshold in advance. This number is the actual cost per event when applying the model-and-threshold developed with the Training Set to the new, Test Set data.
+
+Note: for Coursera to interpret your answer correctly you must give your answer as an integer - no decimals or dollar sign.
+
+For Example - enter $800.00 as "800"
+
+Answer    400
+
+7.
+Question 7
+Putting a Dollar Value on Your Model Plus the Data
+
+Assume your Test Set cost-per-event results from Question 6 are sustainable long term.
+
+Question: How much money does the bank save, per event, using your model and its data-inputs, instead of issuing credit cards to everyone who asks?
+
+Hint: the cost of issuing credit cards to everyone (no model, no forecast) has been determined to be 25%*$5000 = $1,250 per event. Dollar value of the model-plus-data is the difference between $1,250 and your number.
+
+Note: for Coursera to interpret your answer correctly you must give your answer as an integer - no decimals or dollar sign.
+
+For Example - enter $800.00 as "800"
+
+Answer    480
+
+8.
+Question 8
+Payback Period for Your Model
+
+Question: Given that it apparently cost the bank $750,000 to conduct the three-year experiment, if the bank processes 1000 credit card applicants per day on average, how many days will it take to ensure future savings will pay back the bank's initial investment?
+
+Give number rounded to the nearest day (integer value).
+
+Hint: multiply your answer to Question 7 - the cost savings per applicant - by 1000 to get the savings per day.
+
+Answer    1
+
+Question 9
+Any model that is reducing uncertainty will have a True Positive Rate...
+
+
+Answer      ...Greater than the Test Incidence (% of outcomes classified as "default")
+
+
+10.
+Question 10
+Given that the base rate of default in the population is 25%, any test that is reducing uncertainty will have a Positive Predictive Value (PPV)...
+
+Answer    ...Greater than .25
+
+11.
+Question 11
+Given that the base rate of default in the population is 25%, any test that is reducing uncertainty will have a Negative Predictive Value (NPV)...
+
+
+Answer    ...Greater than .75
+
+
+12.
+Question 12
+Confusion Matrix Metrics. To determine all performance metrics for a binary classification, it is sufficient to have three values
+
+The Condition Incidence (here the default rate of 25%)
+The probability of True Positives (the True Positive rate multiplied by the Condition Incidence)
+The “Test Incidence” (also called “classification incidence” - the sum of the probability of True Positives and False Positives)
+These three values can all be obtained from the AUC Calculator Spreadsheetand and then used as inputs to the Information Gain Calculator Spreadsheet to determine all other performance metrics.
+
+AUC_Calculator and Review of AUC Curve.xlsx
+Information Gain Calculator.xlsx
+Question: What is your model’s True Positive Rate?
+
+Save this answer as it will be needed again for Part 3 (Quiz 3)
+
+Answer .26
+13.
+Question 13
+Question: What is your model’s “test incidence”?
+
+Save this answer as it will be needed again for Part 3 (Quiz 3)
+
+Answer      .25
+
