@@ -1,0 +1,174 @@
+1.
+Question 1
+A University admissions test has a Gaussian distribution of test scores with a mean of 500 and standard deviation of 100. One student out-performed 97.4% of all test takers.
+
+What was their test score (rounded to the nearest whole number)?
+
+Hint: Refer to the Excel NormSFunctions Spreadsheet.
+
+Excel NormS Functions Spreadsheet.xlsx
+Answer    694
+
+2.
+Question 2
+A carefully machined wire comes off an assembly line within a certain tolerance. Its target diameter is 100 microns, and the wires produced have a uniform distribution of diameters, between -11 microns and +29 microns from the target.
+
+What is the mean and standard deviation of the uniform distribution of wire diameters?
+
+Hint: Use the CLT and Excel Rand() Spreadsheet.
+
+CLT and Excel Rand.xlsx
+
+Answer     Mean = 120 microns, Standard Deviation = .86 microns.
+
+3.
+Question 3
+A population of people suffering from Tachycardia (occasional rapid heart rate), agrees to test a new medicine that is supposed to lower heart rate. In the population being studied, before taking any medicine the mean heart rate was 120 beats per minute, with standard deviation = 15 beats per minute.
+
+After being given the medicine, a sample of 45 people had an average heart rate of 112 beats per minute. What is the probability that this much variation from the mean could have occurred by chance alone?
+
+Hint: Use the Typical Problem with NormSDist Spreadsheet.
+
+Typical Problem_ NormSDist .xlsx
+
+Answer    99.9827%
+
+4.
+Question 4
+Two stocks have the following expected annual returns:
+
+Oil stock – expected return = 9% with standard deviation = 13%
+
+IT stock – expected return = 14% with standard deviation = 25%
+
+The Stocks prices have a small negative correlation: R = -.22.
+
+What is the Covariance of the two stocks?
+
+Hint: Use the Algebra with Gaussians Spreadsheet.
+
+Algebra with Gaussians.xlsx
+Answer      -.00715
+
+5.
+Question 5
+Two stocks have the following expected annual returns:
+
+Oil stock – expected return = 9% with standard deviation = 13%
+
+IT stock – expected return = 14% with standard deviation = 25%
+
+The Stocks prices have a small negative correlation: R = -.22.
+
+Assume return data for the two stocks is standardized so that each is represented as having mean 0 and standard deviation 1. Oil is plotted against IT on the (x,y) axis.
+
+What is the covariance?
+
+Hint: Use the Standardization Spreadsheet.
+
+Standardization Spreadsheet.xlsx
+
+Answer    -.22
+
+
+6.
+Question 6
+Two stocks have the following expected annual returns:
+
+Oil stock – expected return = 9% with standard deviation = 13%
+
+IT stock – expected return = 14% with standard deviation = 25%
+
+The Stocks prices have a small negative correlation: R = -.22.
+
+What is the standard deviation of a portfolio consisting of 70% Oil and 30% IT?
+
+Hint: Use either the Algebra with Gaussians or the Markowitz Portfolio Optimization Spreadsheet.
+
+Algebra with Gaussians.xlsx
+Markowitz Portfolio Optimization.xlsx
+
+Answer    10.44%
+
+7.
+Question 7
+Two stocks have the following expected annual returns:
+
+Oil stock – expected return = 9% with standard deviation = 13%
+
+IT stock – expected return = 14% with standard deviation = 25%
+
+The Stocks prices have a small negative correlation: R = -.22.
+
+Use MS Solver and the Markowitz Portfolio Optimization Spreadsheet to Find the weighted portfolio of the two stocks with lowest volatility.
+
+Solver Add-In.xlsx
+Markowitz Portfolio Optimization.xlsx
+What is the minimum volatility?
+
+Answer    10.36%
+
+8.
+Question 8
+You are a data-analyst for a restaurant chain and are asked to forecast first-year revenues from new store locations. You use census tract data to develop a linear model.
+
+Your first model has a standard deviation of model error of $25,000 at a correlation of R = .30. Your boss asks you to keep working on improving the model until the new standard deviation of model error is $15,000 or less.
+
+What positive correlation R would you need to have a model error of $15,000?
+
+(Note: you can answer this question by making small additions to the Correlation and Model Error spreadsheet).
+
+Correlation and Model Error.xlsx
+
+Answerr   R = .8200
+
+9.
+Question 9
+An automobile parts manufacturer uses a linear regression model to forecast the dollar value of the next years’ orders from current customers as a function of a weighted sum of their past-years’ orders. The model error is assumed Gaussian with standard deviation of $130,000.
+
+If the correlation is R = .33, and the point forecast orders $5.1 million, what is the probability that the customer will order more than $5.3 million?
+
+Hint: Use the Typical Problem with NormSDist Spreadsheet.
+
+Typical Problem_ NormSDist .xlsx
+
+Answer    6.2%
+
+
+10.
+Question 10
+An automobile parts manufacturer uses a linear regression model to forecast the dollar value of the next years’ orders from current customers as a function of a weighted sum of that customer’s past-years orders. The linear correlation is R = .33.
+
+After standardizing the x and y data, what portion of the uncertainty about a customer’s order size is eliminated by their historical data combined with the model?
+
+Hint: Use the Correlation and P.I.G. Spreadsheet.
+
+Correlation and P.I.G..xlsx
+
+Answer      4.2%
+
+11.
+Question 11
+A restaurant offers different dinner “specials” each weeknight. The mean cash register receipt per table on Wednesdays is $75.25 with standard deviation of $13.50. The restaurant experiments one Wednesday with changing the “special” from blue fish to lobster. The average amount spent by 85 customers is $77.20.
+
+How probable is it that Wednesday receipts are better than average by chance alone?
+
+Hint: Use the Typical Problem with NormSDist Spreadsheet.
+
+Typical Problem_ NormSDist .xlsx
+Answer      9.15%
+
+12.
+Question 12
+Your company currently has no way to predict how long visitors will spend on the Company’s web site. All it known is the average time spent is 55 seconds, with an approximately Gaussian distribution and standard deviation of 9 seconds. It would be possible, after investing some time and money in analytics tools, to gather and analyzing information about visitors and build a linear predictive model with a standard deviation of model error of 4 seconds.
+
+How much would the P.I. G. of that model be?
+
+Hint: Use the Correlation and P.I.G. Spreadsheet
+
+How to use the AUC calculator.pdf
+PDF File
+
+Answer    57.2%
+
+
