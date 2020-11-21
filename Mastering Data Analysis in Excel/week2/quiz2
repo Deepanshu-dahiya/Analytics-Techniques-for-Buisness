@@ -1,0 +1,94 @@
+1.
+Question 1
+A test for “driving while intoxicated” was given 100 times. 20 people tested were actually intoxicated, and 10 people were mis-classified as intoxicated. What would the False Positive rate be?
+
+Anwser   12.5%
+
+2.
+Question 2
+If a fire alarm malfunctions and fails to go off when there actually is a fire, that is a:
+Answer    False Negative
+
+3.
+Question 3
+Use the Binary Classification Metrics Spreadsheet Definitions to answer the following:
+
+If the “classification incidence/test incidence” is 10% for the whole population, and the true “condition incidence” is 12% for the whole population, the True Positive rate:
+
+Answer    cannot be 100%
+
+4.
+Question 4
+Use the Cancer Diagnosis Spreadsheet to answer Questions 4 to 6.
+
+Cancer Diagnosis.xlsx
+Keep the cost per False Positive test set at $500. Use MS Solver to determine the maximum cost per False Negative test that permits an average cost per test of $100.
+
+Answer    $12,262
+
+5.
+Question 5
+Assume a cost of $15,000 per False Negative (FN) and $100 per False Positive (FP). What is the minimum average cost per test?
+
+Answer    $25.98
+
+6.
+Question 6
+If, instead of assuming a cost $15,000 per FN and $100 per FP, the costs are assumed to be $7,500 per FN and $50 per FP, what changes?
+
+Answer    The minimum cost threshold of 16,551.930
+
+7.
+Question 7
+Use logic and the definition in the Binary Performance Metrics Spreadsheet to answer the following question.
+
+Binary Performance Metrics.xlsx
+In general, increasing the cost per FN while keeping the cost per FP constant will cause the cost-minimizing threshold score to:
+
+Answer    Decrease
+
+Question 8
+Make a copy of the Bombers and Seagulls Spreadsheet to answer questions 8-10.
+
+Bombers and Seagulls.xlsx
+Modify the spreadsheet data so that there are 4 bombers instead of 3, and 16 seagulls instead of 17, by changing the actual condition for the radar score of 66 from a 0 to a 1 in cell D43.
+
+What is the new Area Under the Curve:
+
+Answer    0.72
+
+
+
+9.
+Question 9
+Assuming the costs for classification errors are 5 million pounds per FN and 4 million pounds per FP, how much does changing the value at Cell D43 from 0 to 1 change the minimum cost per event?
+
+Answer    Increases by 250,000 pounds
+
+10.
+Question 10
+Change the cost per FN to 50 million pounds. How does changing the data in cell D43 from a 0 to a 1 change the cost-minimizing threshold?
+
+
+Answer      Decreases it from 75 to 66.
+
+
+11.
+Question 11
+Use the Binary Performance Metrics Spreadsheet definitions to answer the following question.
+
+Binary Performance Metrics.xlsx
+A population tested for “driving while intoxicated” has a Condition incidence of 20%. If the test has a true positive rate of 70% and a false positive rate of 10%, what is the test’s Positive Predictive Value (PPV)?
+
+ANSWER    0.64
+
+
+12.
+Question 12
+Use the Soldier Performance Spreadsheet to answer question 12.
+
+Forecasting Soldier Performance.xlsx
+Rank the outcomes using soldier’s age as the score, with the oldest at the top. A threshold of 24 years represents what point on the ROC Curve?
+
+Answer      .67, .33
+
